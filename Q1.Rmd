@@ -4,4 +4,17 @@ output: html_document
 date: "2024-09-02"
 ---
 
+# REQUIRMENT LIBRARY
+```{r}
+library(dplyr)
+library(ggplot2)
+library(forecast)
+library(readxl)
+```
+
+
+# Reading dataset 
+```{r}
+ds <- read.csv("hlfs-jun24qtr-csv")
+```
 
