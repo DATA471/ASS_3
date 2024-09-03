@@ -3,6 +3,15 @@ title: "Q1"
 output: html_document
 date: "2024-09-02"
 ---
+DATASET:
+    DATASET: (hlfs-jun24qtr-csv)
+    DATASET COLUMNS :  
+        Series_reference: , 
+        Period: Date ,
+        Employed.and.Unemployed.Persons..Full.Time.and.Part.Time.Status:
+              - (Unemployed Part-Time) and (Part-Time Unemployment Rate)
+      
+---
 
 # REQUIRMENT LIBRARY
 ```{r}
@@ -13,8 +22,30 @@ library(readxl)
 ```
 
 
-# Reading dataset 
+# READING DATASET
 ```{r}
-ds <- read.csv("hlfs-jun24qtr-csv")
+ds <- read.csv("data/filtered_dataset.csv")
+
+```
+
+
+# Filter dataset with nessacery column
+```{r}
+#columns_name <- c(Series_reference, Period, Subject, Employed.and.Unemployed.Persons..Full.Time.and.Part.Time.Status)
+
+dataset_ <- select(ds, c(Series_reference, Period, Subject, Employed.and.Unemployed.Persons..Full.Time.and.Part.Time.Status))
+```
+
+
+# Clause(a)
+```{r}
+# Convert the unemployment rate and unemployment counts to time series objects and plot them. Make sure you derive year and quarter of each observation from the Period column. The Period value is a combination of the year + the number of the month at the end of the quarter. e.g. 1990.09 is the September (3rd) quarter of 1990
+
+
+```
+
+# Clause(b)
+```{r}
+# Estimate the size of the part time labour force for each quarter from these two time series. Plot and comment on what you find
 ```
 
